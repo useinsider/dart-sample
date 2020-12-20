@@ -25,7 +25,7 @@ apply plugin: 'com.android.application'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 30
 
     lintOptions {
         disable 'InvalidPackage'
@@ -37,8 +37,8 @@ android {
         applicationId "com.useinsider.InsiderDemo"
         // TODO: Please change with your partner name.
         manifestPlaceholders = [partner:"your_partner_name"]
-        minSdkVersion 16
-        targetSdkVersion 28
+        minSdkVersion 17
+        targetSdkVersion 30
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }

@@ -95,16 +95,20 @@ class _MyAppState extends State<MyApp> {
     currentUser.setFacebookID("Facebook-ID");
     currentUser.setTwitterID("Twittter-ID");
     currentUser.setLanguage("TR");
+    currentUser.setLocale("tr_TR");
 
     // Setting User Identifiers.
     FlutterInsiderIdentifiers identifiers = new FlutterInsiderIdentifiers();
-    identifiers.addEmail("1");
-    identifiers.addPhoneNumber("2");
-    identifiers.addUserID("3");
+    identifiers.addEmail("mobile@useinsider.com");
+    identifiers.addPhoneNumber("+901234567");
+    identifiers.addUserID("CRM-ID");
+    identifiers.addCustomIdentifier("key", "value");
 
     // Login and Logout
     await currentUser.logout();
-    await currentUser.login(identifiers);
+    await currentUser.login(identifiers, insiderIDResult: (insiderID) {
+      print("[INSIDER][login][insiderIDResult]:" + insiderID);
+    });
 
     // Setting custom attributes.
     // MARK: Your attribute key should be all lowercased and should not include any special or non Latin characters or any space, otherwise this attribute will be ignored. You can use underscore _.
@@ -210,7 +214,7 @@ class _MyAppState extends State<MyApp> {
     // --- RECOMMENDATION ENGINE --- //
 
     // ID comes from your smart recommendation campaign.
-    // Please follow the language code structure. For instance tr_TR.
+    // Please follow the locale code structure. For instance tr_TR.
     Map recommendationWithID =
         await FlutterInsider.Instance.getSmartRecommendation(1, "tr_TR", "TRY");
 
@@ -246,13 +250,13 @@ class _MyAppState extends State<MyApp> {
     FlutterInsider.Instance.setGDPRConsent(true);
 
     // --- MESSAGE CENTER --- //
-    // DateTime endDate = new DateTime(2019);
-    // DateTime startDate = new DateTime(2020, DateTime.december);
-    // print("[INSIDER][startDate]: " + startDate.toString());
-    // print("[INSIDER][endDate]: " + endDate.toString());
-    // List messageCenterData = await FlutterInsider.Instance.getMessageCenterData(
-    //     startDate, endDate, 20);
-    // print("[INSIDER][getMessageCenterData]: " + messageCenterData.toString());
+    DateTime endDate = new DateTime(2019);
+    DateTime startDate = new DateTime(2020, DateTime.december);
+    print("[INSIDER][startDate]: " + startDate.toString());
+    print("[INSIDER][endDate]: " + endDate.toString());
+    List messageCenterData = await FlutterInsider.Instance.getMessageCenterData(
+        startDate, endDate, 20);
+    print("[INSIDER][getMessageCenterData]: " + messageCenterData.toString());
 
     // --- CONTENT OPTIMIZER --- //
 

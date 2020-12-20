@@ -1,12 +1,12 @@
 PODS:
   - Flutter (1.0.0)
-  - flutter_insider (1.1.0):
+  - flutter_insider (2.1.0):
     - Flutter
-    - InsiderHybrid (= 1.1.0)
-    - InsiderMobile (= 10.4.0)
+    - InsiderHybrid (= 1.1.2)
+    - InsiderMobile (= 10.7.0)
   - iCarousel (1.8.3)
-  - InsiderHybrid (1.1.0)
-  - InsiderMobile (10.4.0)
+  - InsiderHybrid (1.1.2)
+  - InsiderMobile (10.7.0)
   - InsiderMobileAdvancedNotification (1.0.5):
     - iCarousel
 
@@ -30,10 +30,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
-  flutter_insider: 613835d31e5f9b077f2cc74cf2c3521284660ae0
+  flutter_insider: 974c6f2155e66bf49ba158033000850a44588244
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
-  InsiderHybrid: 4ed5f5b62f8366654f5b5ecb0be43265f18c9af2
-  InsiderMobile: 3f77591b5e841bc24d47f1df61cabc53c6b5a445
+  InsiderHybrid: 64dfb4f033e344be9a42b7121c95983f37b12892
+  InsiderMobile: 8b74ee0f67169e8a289555b94ae1670e4308f1fe
   InsiderMobileAdvancedNotification: be6a46e1ee3fde9a0b20848d6efa35b929f85b7a
 
 PODFILE CHECKSUM: ff5898380c01ff21f499c4e2877ffbb385bbd69d
