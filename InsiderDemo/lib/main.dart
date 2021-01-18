@@ -102,13 +102,10 @@ class _MyAppState extends State<MyApp> {
     identifiers.addEmail("mobile@useinsider.com");
     identifiers.addPhoneNumber("+901234567");
     identifiers.addUserID("CRM-ID");
-    identifiers.addCustomIdentifier("key", "value");
 
     // Login and Logout
     await currentUser.logout();
-    await currentUser.login(identifiers, insiderIDResult: (insiderID) {
-      print("[INSIDER][login][insiderIDResult]:" + insiderID);
-    });
+    await currentUser.login(identifiers);
 
     // Setting custom attributes.
     // MARK: Your attribute key should be all lowercased and should not include any special or non Latin characters or any space, otherwise this attribute will be ignored. You can use underscore _.

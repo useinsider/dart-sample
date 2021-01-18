@@ -1,3 +1,13 @@
+# 2.1.1+nh
+
+`nh` stands for non-huawei.
+
+Same as 2.1.0 without any Huawei dependencies and services.
+
+# 2.1.1
+
+Android native SDK version has been set to 11.6.1.
+
 # 2.1.0+nh
 
 `nh` stands for non-huawei.
