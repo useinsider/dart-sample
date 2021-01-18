@@ -2,7 +2,7 @@
 
 `nh` stands for non-huawei.
 
-Same as 2.1.0 without any Huawei dependencies and services.
+Same as 2.1.1 without any Huawei dependencies and services.
 
 # 2.1.1
 
