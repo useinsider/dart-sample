@@ -71,8 +71,10 @@ class _MyAppState extends State<MyApp> {
 
     // This is an utility method, if you want to handle the push permission in iOS own your own you can omit the following method.
     FlutterInsider.Instance.registerWithQuietPermission(false);
-
     FlutterInsider.Instance.startTrackingGeofence();
+    FlutterInsider.Instance.enableCarrierCollection(true);
+    FlutterInsider.Instance.enableIDFACollection(true);
+    FlutterInsider.Instance.enableIpCollection(true);
   }
 
   Future trigger() async {
@@ -289,13 +291,11 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-            child: FlatButton(
-          onPressed: () {
-            trigger();
-          },
-          child: Text(_callbackData),
-          color: Colors.lightBlue,
-        )),
+            child: TextButton(
+                onPressed: () {
+                  trigger();
+                },
+                child: Text(_callbackData))),
       ),
     );
   }
