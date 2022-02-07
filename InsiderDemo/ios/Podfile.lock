@@ -1,41 +1,39 @@
 PODS:
-  - Flutter (1.0.0)
-  - flutter_insider (2.1.0):
+  - Flutter (2.5)
+  - flutter_insider (3.0.1):
     - Flutter
     - InsiderHybrid (= 1.1.2)
-    - InsiderMobile (= 10.7.0)
+    - InsiderMobile (= 12.0.0)
   - iCarousel (1.8.3)
   - InsiderHybrid (1.1.2)
-  - InsiderMobile (10.7.0)
-  - InsiderMobileAdvancedNotification (1.0.5):
+  - InsiderMobile (12.0.0)
+  - InsiderMobileAdvancedNotification (1.0.6):
     - iCarousel
 
 DEPENDENCIES:
-  - Flutter (from `Flutter`)
   - flutter_insider (from `.symlinks/plugins/flutter_insider/ios`)
   - InsiderMobileAdvancedNotification
 
 SPEC REPOS:
   trunk:
+    - Flutter
     - iCarousel
     - InsiderHybrid
     - InsiderMobile
     - InsiderMobileAdvancedNotification
 
 EXTERNAL SOURCES:
-  Flutter:
-    :path: Flutter
   flutter_insider:
     :path: ".symlinks/plugins/flutter_insider/ios"
 
 SPEC CHECKSUMS:
-  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
-  flutter_insider: 974c6f2155e66bf49ba158033000850a44588244
+  Flutter: 4e094eefe76d76f60537272587a6eb1abcf12d09
+  flutter_insider: 929dc0549a3cf3957176145a93a8ef01879b0632
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   InsiderHybrid: 64dfb4f033e344be9a42b7121c95983f37b12892
-  InsiderMobile: 8b74ee0f67169e8a289555b94ae1670e4308f1fe
-  InsiderMobileAdvancedNotification: be6a46e1ee3fde9a0b20848d6efa35b929f85b7a
+  InsiderMobile: 51419c8fbf1e0b9f4ad9fc14e7a49f3f2e175791
+  InsiderMobileAdvancedNotification: 70402f66430056bcf8c5223e2e3b2d603a50137c
 
-PODFILE CHECKSUM: ff5898380c01ff21f499c4e2877ffbb385bbd69d
+PODFILE CHECKSUM: 1f48cb3423d52c7302385598b6d5ecf92f1ae7c5
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.11.2
