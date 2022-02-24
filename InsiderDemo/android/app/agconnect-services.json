@@ -1,0 +1,27 @@
+{
+	"agcgw":{
+		"backurl":"connect-dre.dbankcloud.cn",
+		"url":"connect-dre.hispace.hicloud.com"
+	},
+	"client":{
+		"cp_id":"5190090000024899053",
+		"product_id":"9105385871708560271",
+		"client_id":"319479266662155392",
+		"client_secret":"57CAF54628A7E1E36EA60F19F38C70BBC5FD58B078EDFB27EF43CA68C9900667",
+		"app_id":"101874749",
+		"package_name":"com.solodroid.ecommerce",
+		"api_key":"CV6W615578tC88eXkDgJyOzfEZZ4UtEKCzSz9/FvlaGmWHzKMXbykeBCcWZG3xNUio51lbM3wATfp0PRxQ7+4ks7WHYK"
+	},
+	"service":{
+		"analytics":{
+			"collector_url":"datacollector-dre.dt.hicloud.com,datacollector-dre.dt.dbankcloud.cn",
+			"resource_id":"p1",
+			"channel_id":""
+		},
+		"ml":{
+			"mlservice_url":"ml-api-dre.ai.dbankcloud.com,ml-api-dre.ai.dbankcloud.cn"
+		}
+	},
+	"region":"DE",
+	"configuration_version":"1.0"
+}

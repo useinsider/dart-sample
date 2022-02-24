@@ -58,3 +58,4 @@ flutter {
 
 //Required
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.huawei.agconnect'

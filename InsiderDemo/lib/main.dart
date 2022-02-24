@@ -82,7 +82,7 @@ class _MyAppState extends State<MyApp> {
 
     // You can crete Insider User and add attributes later on it.
 
-    FlutterInsiderUser currentUser = FlutterInsider.Instance.getCurrentUser();
+    FlutterInsiderUser currentUser = FlutterInsider.Instance.getCurrentUser()!;
 
     // Setting User Attributes
     currentUser.setName("Insider");
@@ -121,11 +121,9 @@ class _MyAppState extends State<MyApp> {
 
     // MARK: You can only call the method with array of string otherwise this event will be ignored.
 
-    List<String> arr = new List(3);
-    arr[0] = "value1";
-    arr[1] = "value2";
-    arr[2] = "value3";
-    FlutterInsider.Instance.getCurrentUser()
+    final arr = <String>['value1', 'value2', 'value3'];
+
+    FlutterInsider.Instance.getCurrentUser()!
         .setCustomAttributeWithArray("key", arr);
 
     // --- EVENT --- //
@@ -160,10 +158,8 @@ class _MyAppState extends State<MyApp> {
 
     // MARK: If any parameter which is passed to this method is nil / null or an empty string, it will return an empty and invalid Insider Product Object. Note that an invalid Insider Product object will be ignored for any product related operations.
     // You can crete Insider Product and add attributes later on it.
-    List<String> taxonomy = new List(3);
-    taxonomy[0] = "tax1";
-    taxonomy[1] = "tax2";
-    taxonomy[2] = "tax3";
+    final taxonomy = <String>['tax1', 'tax2', 'tax3'];
+
     FlutterInsiderProduct insiderExampleProduct =
         FlutterInsider.Instance.createNewProduct("productID", "productName",
             taxonomy, "imageURL", 1000.5, "currency");
@@ -214,13 +210,13 @@ class _MyAppState extends State<MyApp> {
 
     // ID comes from your smart recommendation campaign.
     // Please follow the locale code structure. For instance tr_TR.
-    Map recommendationWithID =
+    Map? recommendationWithID =
         await FlutterInsider.Instance.getSmartRecommendation(1, "tr_TR", "TRY");
 
     print("[INSIDER][getSmartRecommendation]: " +
         recommendationWithID.toString());
 
-    Map recommendationWithProduct =
+    Map? recommendationWithProduct =
         await FlutterInsider.Instance.getSmartRecommendationWithProduct(
             insiderExampleProduct, 1, "tr_TR");
 
@@ -236,9 +232,11 @@ class _MyAppState extends State<MyApp> {
     FlutterInsider.Instance.visitHomePage();
     FlutterInsider.Instance.visitListingPage(taxonomy);
 
-    List<FlutterInsiderProduct> insiderExampleProducts = new List(2);
-    insiderExampleProducts[0] = insiderExampleProduct;
-    insiderExampleProducts[1] = insiderExampleProduct;
+    final insiderExampleProducts = <FlutterInsiderProduct>[
+      insiderExampleProduct,
+      insiderExampleProduct
+    ];
+
     FlutterInsider.Instance.visitCartPage(insiderExampleProducts);
 
     // --- GDPR --- //
@@ -253,8 +251,9 @@ class _MyAppState extends State<MyApp> {
     DateTime startDate = new DateTime(2020, DateTime.december);
     print("[INSIDER][startDate]: " + startDate.toString());
     print("[INSIDER][endDate]: " + endDate.toString());
-    List messageCenterData = await FlutterInsider.Instance.getMessageCenterData(
-        startDate, endDate, 20);
+    List? messageCenterData =
+        await FlutterInsider.Instance.getMessageCenterData(
+            startDate, endDate, 20);
     print("[INSIDER][getMessageCenterData]: " + messageCenterData.toString());
 
     // --- CONTENT OPTIMIZER --- //
