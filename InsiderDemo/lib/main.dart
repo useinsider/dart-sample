@@ -39,12 +39,6 @@ class _MyAppState extends State<MyApp> {
             _callbackData = data.toString();
           });
           break;
-        case InsiderCallbackAction.INAPP_BUTTON_CLICK:
-          print("[INSIDER][INAPP_BUTTON_CLICK]: " + data.toString());
-          setState(() {
-            _callbackData = data.toString();
-          });
-          break;
         case InsiderCallbackAction.TEMP_STORE_PURCHASE:
           print("[INSIDER][TEMP_STORE_PURCHASE]: " + data.toString());
           setState(() {
@@ -124,7 +118,7 @@ class _MyAppState extends State<MyApp> {
     final arr = <String>['value1', 'value2', 'value3'];
 
     FlutterInsider.Instance.getCurrentUser()!
-        .setCustomAttributeWithArray("key", arr);
+        .setCustomAttributeWithArray("arr_attribute", arr);
 
     // --- EVENT --- //
 
@@ -137,8 +131,7 @@ class _MyAppState extends State<MyApp> {
         .build();
 
     // You can create an object and add the parameters later
-    FlutterInsiderEvent insiderExampleEvent =
-        FlutterInsider.Instance.tagEvent("third_event");
+    FlutterInsiderEvent insiderExampleEvent = FlutterInsider.Instance.tagEvent("third_event");
 
     insiderExampleEvent
         .addParameterWithString("string_parameter", "This is Insider.")
@@ -247,13 +240,12 @@ class _MyAppState extends State<MyApp> {
     FlutterInsider.Instance.setGDPRConsent(true);
 
     // --- MESSAGE CENTER --- //
-    DateTime endDate = new DateTime(2019);
-    DateTime startDate = new DateTime(2020, DateTime.december);
+    DateTime startDate = new DateTime(2020);
+    DateTime endDate = new DateTime(2022, DateTime.december);
     print("[INSIDER][startDate]: " + startDate.toString());
     print("[INSIDER][endDate]: " + endDate.toString());
     List? messageCenterData =
-        await FlutterInsider.Instance.getMessageCenterData(
-            startDate, endDate, 20);
+        await FlutterInsider.Instance.getMessageCenterData(startDate, endDate, 20);
     print("[INSIDER][getMessageCenterData]: " + messageCenterData.toString());
 
     // --- CONTENT OPTIMIZER --- //
