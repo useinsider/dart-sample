@@ -35,7 +35,8 @@ android {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         // TODO: Please change with your application ID as it is in google-service.json.
         applicationId "com.useinsider.InsiderDemo"
-        // TODO: Please change with your partner name. You can find the partner name after login into the Insider panel. The left side of your mail address.
+        // TODO: Please change with your partner name. You can find the partner name after login
+        //  into the Insider panel. The left side of your mail address.
         manifestPlaceholders = [partner:"your_partner_name"]
         minSdkVersion 19
         targetSdkVersion 32
