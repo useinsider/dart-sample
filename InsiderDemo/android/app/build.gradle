@@ -25,7 +25,7 @@ apply plugin: 'com.android.application'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
-    compileSdkVersion 32
+    compileSdkVersion 30
 
     lintOptions {
         disable 'InvalidPackage'
@@ -39,7 +39,7 @@ android {
         //  into the Insider panel. The left side of your mail address.
         manifestPlaceholders = [partner:"your_partner_name"]
         minSdkVersion 19
-        targetSdkVersion 32
+        targetSdkVersion 30
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
