@@ -39,18 +39,6 @@ class _MyAppState extends State<MyApp> {
             _callbackData = data.toString();
           });
           break;
-        case InsiderCallbackAction.TEMP_STORE_PURCHASE:
-          print("[INSIDER][TEMP_STORE_PURCHASE]: " + data.toString());
-          setState(() {
-            _callbackData = data.toString();
-          });
-          break;
-        case InsiderCallbackAction.TEMP_STORE_ADDED_TO_CART:
-          print("[INSIDER][TEMP_STORE_ADDED_TO_CART]: " + data.toString());
-          setState(() {
-            _callbackData = data.toString();
-          });
-          break;
         case InsiderCallbackAction.TEMP_STORE_CUSTOM_ACTION:
           print("[INSIDER][TEMP_STORE_CUSTOM_ACTION]: " + data.toString());
           setState(() {
