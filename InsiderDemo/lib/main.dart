@@ -52,6 +52,7 @@ class _MyAppState extends State<MyApp> {
     });
 
     // This is an utility method, if you want to handle the push permission in iOS own your own you can omit the following method.
+    FlutterInsider.Instance.setActiveForegroundPushView();
     FlutterInsider.Instance.registerWithQuietPermission(false);
     FlutterInsider.Instance.startTrackingGeofence();
     FlutterInsider.Instance.enableCarrierCollection(true);
