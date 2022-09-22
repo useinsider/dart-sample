@@ -68,7 +68,7 @@ packages:
       name: flutter_insider
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.2.0"
+    version: "3.3.0"
   flutter_test:
     dependency: "direct dev"
     description: flutter
