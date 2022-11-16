@@ -6,7 +6,7 @@ PODS:
     - InsiderMobile (= 12.5.2)
   - InsiderHybrid (1.2.1)
   - InsiderMobile (12.5.2)
-  - InsiderMobileAdvancedNotification (1.2.1)
+  - InsiderMobileAdvancedNotification (1.2.2)
 
 DEPENDENCIES:
   - flutter_insider (from `.symlinks/plugins/flutter_insider/ios`)
@@ -28,8 +28,8 @@ SPEC CHECKSUMS:
   flutter_insider: 2fd97a67f9ea4da2deda268a38d6097490574578
   InsiderHybrid: 89e1534ee0e70514748c5426981f8fa2c5dc6f05
   InsiderMobile: 6c0def28487ac5a994055f042495ab8905e99959
-  InsiderMobileAdvancedNotification: adec892c8fc97d88246e238c74926f4a94f1d803
+  InsiderMobileAdvancedNotification: 5f6721f0a6a6548f711cef29e0b264e96492c961
 
 PODFILE CHECKSUM: 1f48cb3423d52c7302385598b6d5ecf92f1ae7c5
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.11.2
