@@ -13,6 +13,8 @@ import UserNotificationsUI
 
 let APP_GROUP = "group.com.useinsider.InsiderDemo"
 
+@objc(NotificationViewController)
+
 class NotificationViewController: UIViewController, UNNotificationContentExtension, iCarouselDelegate, iCarouselDataSource {
     @IBOutlet weak var carousel: iCarousel!
     
